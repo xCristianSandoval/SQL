@@ -1,0 +1,24 @@
+--Create a table for my friends Pizza store, where it contains name,price,wait time, of pizza, as well if its gluten-free.
+
+CREATE TABLE ePizza(id INTEGER PRIMARY KEY, name TEXT, price INTEGER, wait INTEGER, glutenFree TEXT);
+
+INSERT INTO ePizza Values(1, "Pepperoni", 10, 10,"NO");
+INSERT INTO ePizza Values(2, "Cheese", 5, 5,"YES");
+INSERT INTO ePizza Values(3, "Mexican", 12, 15,"NO");
+INSERT INTO ePizza Values(4,"Meat Lovers",13, 15,"NO");
+INSERT INTO ePizza Values(5,"HAWAIIN",14,10,"YES");
+INSERT INTO ePizza Values(6, "San Diego", 15, 10,"NO");
+INSERT INTO ePizza Values(7, "Cali", 16, 12,"YES");
+INSERT INTO ePizza Values(8, "TJ", 15, 13,"NO");
+INSERT INTO ePizza Values(9,"Big Mama",15, 12,"YES");
+INSERT INTO ePizza Values(10,"Big Papa",17,15,"NO");
+INSERT INTO ePizza Values(11, "Saucey", 11, 10,"NO");
+INSERT INTO ePizza Values(12, "Shadow",11, 5,"YES");
+INSERT INTO ePizza Values(13, "The EVERYTHING", 20, 15,"NO");
+INSERT INTO ePizza Values(14,"The Casey", 8, 15,"NO");
+INSERT INTO ePizza Values(15,"The Brother",9, 5,"NO");
+
+SELECT * FROM ePizza;
+SELECT name,MIN(price) FROM ePizza;
+-- selecting the lowest price using the price column and the MIN() function.
+
