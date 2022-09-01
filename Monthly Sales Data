@@ -48,3 +48,11 @@ left join BIT_DB.customers cust --cust alias
 on  feb.orderid = cust.order_id
 where feb.quantity > 2
 ;
+--List all the products sold in Los Angeles in February, and include how many of each were sold.
+select product
+, sum(quantity) --adding the sum() function makes sure its all of each, remember to group by
+from BIT_DB.FebSales
+where location 
+like '%Los Angeles%' 
+group by product 
+;
